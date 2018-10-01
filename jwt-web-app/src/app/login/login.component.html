@@ -1,0 +1,40 @@
+<div class="container">
+<div class="col-md-5 col-md-offset-3"  >
+<div class="alert alert-danger" *ngIf="mode==1">
+<strong>Bad Credentials !</strong>
+</div>
+
+<div class="panel panel-primary">
+<div class="panel-heading">Authentication</div>
+<div class="panel-body">
+<form #f="ngForm" (ngSubmit)="onLogin(f.value)">
+<div class="form-group">
+<label for="username" class="control-label">Username:</label>
+<input class="form-control" ngModel type="text" name="username" id="username" #username="ngModel" required/>
+</div>
+
+<div class="form-group">
+<label for="pwd"class="control-label">Password:</label>
+<input class="form-control" ngModel type="password" name="password" id="pwd" #password="ngModel" required/>
+</div>
+
+<button type="submit" class="btn btn-danger">Login</button>
+
+
+
+</form>
+</div>
+</div>
+
+</div>
+<!--  
+
+<div >
+     <h1>Detail of the day</h1>
+     <button type="button" (click)="toggleChild()">Click</button>
+     <div> <app-child [showMePartially]="showVar"></app-child></div>
+</div> 
+-->
+
+
+</div>

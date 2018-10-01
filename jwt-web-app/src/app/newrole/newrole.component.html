@@ -1,0 +1,44 @@
+<app-sidenav></app-sidenav>
+<div class="container">
+
+
+<div class="row col-md-6" >
+ <div class="panel panel-default" >
+  <div class="panel-heading">New Role</div>
+  <div class="panel-body">
+    <form #f="ngForm" (ngSubmit)="onSaveRole(f.value)">
+      <div class="form-group">
+       <label class="control-label">Role Name:</label>
+       <input class="form-control" type="text" name="name" ngModel="" required #input (input)="input.value=$event.target.value.toUpperCase()"  />
+      </div>
+     
+      
+      
+   
+      <button class="btn btn-danger" routerLink='/roles' >Back</button>
+      <button class="btn btn-success" type="submit" [disabled]="!f.valid">Save Role</button>
+    
+    </form>
+  </div>
+ 
+ </div>
+
+</div>
+
+<div *ngIf="mode==2">
+
+
+  <!--  <h2>You submitted the following:</h2>
+  <div class="row">
+    <div class="col-xs-3">UserName</div>
+    <div class="col-xs-9  pull-left">{{ user.username }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">With the following password</div>
+    <div class="col-xs-9 pull-left">{{ user.password }}</div>
+  </div>
+
+  <br>
+  <button class="btn btn-primary" (click)="mode=1">Edit</button>-->
+</div>
+hello

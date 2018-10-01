@@ -1,0 +1,12 @@
+
+
+<div *ngIf="showMePartially">
+<!-- <form #f="ngForm"  > -->
+  
+ 
+    
+    <ul *ngFor="let r of rights"> 
+  <input type="checkbox" name="{{r.id}}" value="{{r.description}}"> 
+    <li>{{r.description}}</li>
+
+</ul>

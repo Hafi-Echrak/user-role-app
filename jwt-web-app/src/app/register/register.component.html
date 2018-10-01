@@ -1,0 +1,75 @@
+<app-sidenav></app-sidenav>
+<div class="container">
+
+  <div class="alert alert-danger" *ngIf="mode==0">
+
+  <strong>You are not authorized to add new User</strong>
+
+</div>
+
+<div class="row col-md-6" *ngIf="mode==1">
+ <div class="panel panel-default" >
+  <div class="panel-heading">New User</div>
+  <div class="panel-body">
+    <form #f="ngForm" (ngSubmit)="onRegister(f.value)">
+      <div class="form-group">
+       <label class="control-label">Full Name:</label>
+       <input class="form-control" type="text" name="fullname" ngModel="" required />
+      </div>
+     
+      <div class="form-group">
+       <label class="control-label">Username:</label>
+       <input class="form-control" type="text" name="username" ngModel="" required />
+      </div>
+      
+      <div class="form-group">
+       <label class="control-label">Password:</label>
+       <input class="form-control" type="password" name="password" ngModel="" required />
+      </div>
+      
+      <div class="form-group">
+       <label class="control-label">Confirm Password:</label>
+       <input class="form-control" type="password" name="repassword" ngModel="" required />
+      </div>
+      
+      <div class="form-group">
+       <label class="control-label">CIN Number:</label>
+       <input class="form-control" type="number" name="cin" ngModel="" required />
+      </div>
+      
+      <div class="form-group">
+       <label class="control-label">Birth Date:</label>
+       <input class="form-control" type="date" name="datenaissance" ngModel="" required />
+      </div>
+      
+      <div class="form-group">
+       <label class="control-label">Job:</label>
+       <input class="form-control" type="text" name="poste" ngModel="" required />
+      </div>
+        <button class="btn btn-danger" routerLink='/users' >Back</button>
+      <button class="btn btn-success" type="submit" [disabled]="!f.valid">Save User</button>
+    
+    </form>
+  </div>
+ 
+ </div>
+
+</div>
+
+<div *ngIf="mode==2">
+
+
+  <!--  <h2>You submitted the following:</h2>
+  <div class="row">
+    <div class="col-xs-3">UserName</div>
+    <div class="col-xs-9  pull-left">{{ user.username }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">With the following password</div>
+    <div class="col-xs-9 pull-left">{{ user.password }}</div>
+  </div>
+
+  <br>
+  <button class="btn btn-primary" (click)="mode=1">Edit</button>-->
+</div>
+hello
